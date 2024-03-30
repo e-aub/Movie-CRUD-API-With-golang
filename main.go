@@ -22,6 +22,9 @@ type Director struct {
 
 var movies []Movie
 
+func getMovie(w http.ResponseWriter, r *http.Request) {
+
+}
 func main() {
 	movies = append(movies, Movie{ID: "001", Isbn: "0115", Title: "Interstellar", Director: &Director{
 		FirstName: "Christopher",
