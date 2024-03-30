@@ -27,6 +27,29 @@ func getMovies(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(movies)
 }
+
+func deleteMovie(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	vars := mux.Vars(r)
+	for index, item := range movies {
+		if item.ID == vars["id"] {
+			movies = append(movies[:index], movies[index+1:]...)
+			break
+		}
+	}
+	json.NewEncoder(w).Encode(movies)
+}
+
+func getMovie(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	vars := mux.Vars(r)
+	for _, item := range movies {
+		if item.ID == vars["id"] {
+			json.NewEncoder(w).Encode(movies)
+			return
+		}
+	}
+}
 func main() {
 	movies = append(movies, Movie{ID: "001", Isbn: "0115", Title: "Interstellar", Director: &Director{
 		FirstName: "Christopher",
