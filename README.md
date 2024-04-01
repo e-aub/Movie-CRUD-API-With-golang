@@ -24,3 +24,9 @@ To get started with this project, follow the steps below:
 - POST /movies: Create a new movie.
 - PUT /movies/{id}: Update an existing movie.
 - DELETE /movies/{id}: Delete a movie.
+
+###Dependencies
+This project uses the following dependencies:
+
+- [gorilla/mux](https://github.com/gorilla/mux): A powerful HTTP router and URL matcher for building Go web servers.
+Make sure to have the dependencies installed before running the application.
