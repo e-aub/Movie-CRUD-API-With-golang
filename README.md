@@ -26,6 +26,7 @@ To get started with this project, follow the steps below:
 - DELETE /movies/{id}: Delete a movie.
 
 ##Dependencies
+
 This project uses the following dependencies:
 
 - [gorilla/mux](https://github.com/gorilla/mux): A powerful HTTP router and URL matcher for building Go web servers.
