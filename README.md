@@ -31,3 +31,8 @@ This project uses the following dependencies:
 
 - [gorilla/mux](https://github.com/gorilla/mux): A powerful HTTP router and URL matcher for building Go web servers.
 Make sure to have the dependencies installed before running the application.
+
+## Usage
+You can use any HTTP client (e.g., curl, Postman) to interact with the API endpoints. Here's an example of how to create a new movie using cURL:
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"isbn":"0123456789","title":"New Movie","director":{"firstname":"John","lastname":"Doe"}}' http://localhost:8080/movies
